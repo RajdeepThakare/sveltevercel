@@ -19,7 +19,9 @@ export default {
 	kit: {
 	  // default options are shown
 	  adapter: vercel({
+
 		methodOverride: {
+			key: '_method',
 			allowed: ['PATCH', 'DELETE']
 		},
 		// if true, will deploy the app using edge functions
