@@ -15,6 +15,7 @@ import vercel from '@sveltejs/adapter-vercel';
 //};
 
 //export default config;
+/** @type {import('@sveltejs/kit').Config} */
 export default {
 	kit: {
 	  // default options are shown
