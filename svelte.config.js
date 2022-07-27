@@ -19,7 +19,7 @@ import adapter from '@sveltejs/adapter-vercel';
 const config = {
 	kit: {
 	  // default options are shown
-	  adapter: adapter({
+	  adapter: adapter(),
 
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
@@ -38,7 +38,7 @@ const config = {
 		//split: false
 
 		
-	  })
+	  
 	}
   };
 
