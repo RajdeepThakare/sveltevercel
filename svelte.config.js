@@ -1,5 +1,5 @@
 //import adapter from '@sveltejs/adapter-auto';
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-vercel';
 
 
 // /** @type {import('@sveltejs/kit').Config} */
@@ -16,13 +16,12 @@ import vercel from '@sveltejs/adapter-vercel';
 
 //export default config;
 /** @type {import('@sveltejs/kit').Config} */
-export default {
+const config = {
 	kit: {
 	  // default options are shown
 	  adapter: vercel({
 
 		methodOverride: {
-			key: '_method',
 			allowed: ['PATCH', 'DELETE']
 		},
 		// if true, will deploy the app using edge functions
@@ -42,3 +41,5 @@ export default {
 	  })
 	}
   };
+
+  export default config;
