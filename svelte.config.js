@@ -19,6 +19,9 @@ export default {
 	kit: {
 	  // default options are shown
 	  adapter: vercel({
+		methodOverride: {
+			allowed: ['PATCH', 'DELETE']
+		},
 		// if true, will deploy the app using edge functions
 		// (https://vercel.com/docs/concepts/functions/edge-functions)
 		// rather than serverless functions
@@ -30,11 +33,9 @@ export default {
   
 		// if true, will split your app into multiple functions
 		// instead of creating a single one for the entire app
-		split: false,
+		split: false
 
-		methodOverride: {
-						allowed: ['PATCH', 'DELETE']
-					}
+		
 	  })
 	}
   };
